@@ -88,3 +88,9 @@ Question 12 (bonus)
 2. Les espaces sont déjà géré par la regex donné dans le 1 en donnant le groupe tout sauf des parenthèses à l'intérieur des parenthèses.
 
 3. Si il y a des parenthèses imbriqué cela ne prendra que le parenthèses qui sont tout en bas dans l'imbrication, il faudra donc faire tourner le 'cherche/remplacer' autant de fois qu'il y a de niveau d'imbrication.
+
+
+Question 13
+===========
+
+1. La regex pour indentifier les 2 colonnes est '^(.*), (.*)$', on peut ensuite échanger les 2 colonnes en mettant '\2, \1' dans le champs remplacer
