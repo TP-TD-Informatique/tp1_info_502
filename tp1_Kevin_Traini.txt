@@ -104,3 +104,23 @@ Question 14
 12. Avec la commande $ sed -E 's/(\([^()]*\))//g' 12.txt > 12-bis.txt on supprime toutes les parenthèses du ficher avec leurs contenus, le résultat est stocké dans 12-bis.txt. En ne mettant rien en les 2 slashs avant le g de la fin, on dit qu'on veut remplacer ce qu'on a trouvé par une chaine vide.
 
 13. Avec la commande $ sed -E 's/^(.*), (.*)$/\2, \1/g' 13.csv  > 13-bis.csv on échange les 2 colonnes du fichier, et on stocke le résultat dans le fichier 13-bis.csv. '\1' et '\2' représentent respectivement les groupes 1 et 2 du regex de recherche, donc sed les échange comme demandé.
+
+
+Question 15
+===========
+
+1. Le script awk pour afficher le total d'utilisation du cpu par l'utilisateur kevin est :
+BEGIN {
+  cpu = 0
+  user = kevin
+}
+/^kevin.*$/ {
+  cpu += $3
+}
+END {
+  print "kevin\t", cpu"%"
+}
+Ce script se déroule en 3 étapes :
+- BEGIN -> initialise les 2 variables cpu à 0 et user à kevin
+- /^kevin.*$/ -> cherche toutes les lignes commençant par kevin et ajoute à la variable cpu le contenu de la 3ème colonne (le pourcentage de cpu utilisé)
+- END -> affiche le résultat
