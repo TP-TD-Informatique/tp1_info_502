@@ -15,3 +15,13 @@ Question 2
 1. La commande $ ls *!(.jpg|.jpeg) doit afficher tout les fichiers qui vont avec *, sauf les fichiers qui sont exactement .jpg ou .jpeg.
 
 2. Pour afficher tout les fichiers sauf ceux dont l'extension est .jpg ou .jpeg, il faut taper $ ls !(*.jpg|*.jpeg)
+
+
+Question 3
+==========
+
+1. Avec la commande $ grep '\(aa\)*' test.txt ou $ grep -E '(aa)*' test.txt toutes les lignes contenant des 'a' sont affichés
+
+2. Avec la comande $ grep --color -E '(aa)*' test.txt toutes les lignes du fichier sont affichés, et les motifs reconnu sont mis en valeur avec une coloration. La ligne 'aaa' est reconnu car elle contient 'aa'.
+
+3. Pour reconnaitre seulement les lignes qui contiennent exactement un nombre pair de 'a', la commande est $ grep -E '^(aa)*$' test.txt
