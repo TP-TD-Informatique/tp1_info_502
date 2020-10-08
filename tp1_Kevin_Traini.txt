@@ -58,3 +58,9 @@ Question 8
 
 1. La commande permettant de satisfaire les mots commençant et finissant par la même lettre, et les mots ayant au moins 5 fois la même lettre est $ grep -E '^(.).*\1$' american-english | grep -E '^.*(.)(.*\1){4,}.*$'.
 Les mots sont : abracadabra dispossessed effervescence nonintervention salaciousness's sassafras's sassafrases schoolmistress's schoolmistresses seamstress's seamstresses seasickness's secessionist's secessionists selfishness's selflessness selflessness's senselessness senselessness's sensitiveness's sensuousness sensuousness's seriousness's shapelessness shapelessness's sheepishness's shiftlessness shiftlessness's shortsightedness's sleeplessness sleeplessness's sluggishness's snobbishness's spaciousness's sparseness's spotlessness spotlessness's spuriousness's squeamishness's steadfastness's strenuousness's stylishness's sunglasses's
+
+
+Question 9
+==========
+
+1. Pour afficher tout les processus concernant les navigateurs internet, la commande est $ ps aux | grep -E '(firefox|chromium|safari|opera)'. Cette commande affiche également le processus de la commande, nous avons donc une ligne en trop qu'il faut enlever. On remarque que toutes les lignes contiennent une colonne 'Sl', sauf celle qu'on veut enlever qui contient 'S+', donc on rajoute la commande $ | grep -v 'S+' a la fin pour enlever la ligne en trop.
