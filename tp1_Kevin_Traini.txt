@@ -44,4 +44,10 @@ Question 5
 Question 6
 ==========
 
-1. L'expression régulière '^.*([^s].*)\1{5}$' liste touts les mots qui contiennent 6 fois la même lettre qui n'est pas un 's'. Aucun mot ne correspond à cette regex
+1. L'expression régulière '^.*([^s].*)\1{5}$' liste touts les mots qui contiennent 6 fois la même lettre qui n'est pas un 's'. Aucun mot ne correspond à cette regex.
+
+
+Question 7 (bonus)
+==================
+
+1. L'expression régulière '^\(aaa*\)\1\1*$' correspond au chaines de 'a' d'au moins 4 'a'. Le groupe 'aaa*' demande 2 'a' au moins, on répète ce groupe 1 fois, ce qui nous fait au moins 4 'a', et après on rajoute autant de fois qu'on veut ce groupe. Donc ce regex reconnait les chaines de 'a' d'une longueur de 4 minimum.
