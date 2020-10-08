@@ -39,3 +39,9 @@ Question 5
 1. L'expression régulière pour les mots qui contiennent une lettre doublée est '^.*(.)\1.*$'
 
 2. Pour éviter les mots avec une majuscule au début, on rajoute [a-z] au début de la regex '^[a-z].*(.)\1.*$'
+
+
+Question 6
+==========
+
+1. L'expression régulière '^.*([^s].*)\1{5}$' liste touts les mots qui contiennent 6 fois la même lettre qui n'est pas un 's'. Aucun mot ne correspond à cette regex
