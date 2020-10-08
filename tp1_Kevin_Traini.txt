@@ -64,3 +64,11 @@ Question 9
 ==========
 
 1. Pour afficher tout les processus concernant les navigateurs internet, la commande est $ ps aux | grep -E '(firefox|chromium|safari|opera)'. Cette commande affiche également le processus de la commande, nous avons donc une ligne en trop qu'il faut enlever. On remarque que toutes les lignes contiennent une colonne 'Sl', sauf celle qu'on veut enlever qui contient 'S+', donc on rajoute la commande $ | grep -v 'S+' a la fin pour enlever la ligne en trop.
+
+
+Question 10
+===========
+
+1. La regex pour les lignes qui finissent par des espaces ou des tabulation est '^.*[ \t]+$'
+
+2. La regex pour les lignes qui commencent par une tabulation est '^\t.*$'
