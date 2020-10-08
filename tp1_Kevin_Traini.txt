@@ -31,3 +31,11 @@ Question 4
 ==========
 
 1. L'expression régulière pour les mots qui contiennent les lettres a, b, c, d et e dans l'ordre est '^(.*a.*b.*c.*d.*e.*)$'. Le mot renvoyé est 'absconded'.
+
+
+Question 5
+==========
+
+1. L'expression régulière pour les mots qui contiennent une lettre doublée est '^.*(.)\1.*$'
+
+2. Pour éviter les mots avec une majuscule au début, on rajoute [a-z] au début de la regex '^[a-z].*(.)\1.*$'
