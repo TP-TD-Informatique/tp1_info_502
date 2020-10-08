@@ -7,3 +7,11 @@ Question 1
 1. La commande pour lister tout les fichiers .h ou .c est $ ls *.[ch]
 
 2. La commande pour lister tout les fichiers qui n'ont pas un . en avant dernier caractère est $ ls *[!.]?
+
+
+Question 2
+==========
+
+1. La commande $ ls *!(.jpg|.jpeg) doit afficher tout les fichiers qui vont avec *, sauf les fichiers qui sont exactement .jpg ou .jpeg.
+
+2. Pour afficher tout les fichiers sauf ceux dont l'extension est .jpg ou .jpeg, il faut taper $ ls !(*.jpg|*.jpeg)
