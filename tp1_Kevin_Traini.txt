@@ -24,7 +24,7 @@ Question 3
 
 2. Avec la comande $ grep --color -E '(aa)*' test.txt toutes les lignes du fichier sont affichés, et les motifs reconnu sont mis en valeur avec une coloration. La ligne 'aaa' est reconnu car elle contient 'aa'.
 
-3. Pour reconnaitre seulement les lignes qui contiennent exactement un nombre pair de 'a', la commande est $ grep -E '^(aa)*$' test.txt
+3. Pour reconnaître seulement les lignes qui contiennent exactement un nombre pair de 'a', la commande est $ grep -E '^(aa)*$' test.txt
 
 
 Question 4
@@ -44,10 +44,17 @@ Question 5
 Question 6
 ==========
 
-1. L'expression régulière '^.*([^s].*)\1{5}$' liste touts les mots qui contiennent 6 fois la même lettre qui n'est pas un 's'. Aucun mot ne correspond à cette regex.
+1. L'expression régulière '^.*([^s])(.*\1){5}.*$' liste touts les mots qui contiennent 6 fois la même lettre qui n'est pas un 's'. 2 mots correspondent : indivisibility et indivisibility's
 
 
 Question 7 (bonus)
 ==================
 
-1. L'expression régulière '^\(aaa*\)\1\1*$' correspond au chaines de 'a' d'au moins 4 'a'. Le groupe 'aaa*' demande 2 'a' au moins, on répète ce groupe 1 fois, ce qui nous fait au moins 4 'a', et après on rajoute autant de fois qu'on veut ce groupe. Donc ce regex reconnait les chaines de 'a' d'une longueur de 4 minimum.
+1. L'expression régulière '^\(aaa*\)\1\1*$' correspond au chaînes de 'a' d'au moins 4 'a'. Le groupe 'aaa*' demande 2 'a' au moins, on répète ce groupe 1 fois, ce qui nous fait au moins 4 'a', et après on rajoute autant de fois qu'on veut ce groupe. Donc ce regex reconnait les chaines de 'a' d'une longueur de 4 minimum.
+
+
+Question 8
+==========
+
+1. La commande permettant de satisfaire les mots commençant et finissant par la même lettre, et les mots ayant au moins 5 fois la même lettre est $ grep -E '^(.).*\1$' american-english | grep -E '^.*(.)(.*\1){4,}.*$'.
+Les mots sont : abracadabra dispossessed effervescence nonintervention salaciousness's sassafras's sassafrases schoolmistress's schoolmistresses seamstress's seamstresses seasickness's secessionist's secessionists selfishness's selflessness selflessness's senselessness senselessness's sensitiveness's sensuousness sensuousness's seriousness's shapelessness shapelessness's sheepishness's shiftlessness shiftlessness's shortsightedness's sleeplessness sleeplessness's sluggishness's snobbishness's spaciousness's sparseness's spotlessness spotlessness's spuriousness's squeamishness's steadfastness's strenuousness's stylishness's sunglasses's
