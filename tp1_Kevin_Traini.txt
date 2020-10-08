@@ -78,3 +78,13 @@ Question 11
 ===========
 
 1. La regex pour chercher toutes les lignes qui commencent par des espaces est '^( )+(.*)$', on remplace ensuite ces lignes par le deuxième groupe '\2'
+
+
+Question 12 (bonus)
+===================
+
+1. La regex pour indentifier toutes les parenthèses avec leurs contenus est (\([^()]*\)), il suffit ensuite de ne rien mettre dans le 'remplacer par' pour les supprimer.
+
+2. Les espaces sont déjà géré par la regex donné dans le 1 en donnant le groupe tout sauf des parenthèses à l'intérieur des parenthèses.
+
+3. Si il y a des parenthèses imbriqué cela ne prendra que le parenthèses qui sont tout en bas dans l'imbrication, il faudra donc faire tourner le 'cherche/remplacer' autant de fois qu'il y a de niveau d'imbrication.
