@@ -83,7 +83,7 @@ Question 11
 Question 12 (bonus)
 ===================
 
-1. La regex pour indentifier toutes les parenthèses avec leurs contenus est (\([^()]*\)), il suffit ensuite de ne rien mettre dans le 'remplacer par' pour les supprimer.
+1. La regex pour indentifier toutes les parenthèses avec leurs contenus est '(\([^()]*\))', il suffit ensuite de ne rien mettre dans le 'remplacer par' pour les supprimer.
 
 2. Les espaces sont déjà géré par la regex donné dans le 1 en donnant le groupe tout sauf des parenthèses à l'intérieur des parenthèses.
 
@@ -94,3 +94,13 @@ Question 13
 ===========
 
 1. La regex pour indentifier les 2 colonnes est '^(.*), (.*)$', on peut ensuite échanger les 2 colonnes en mettant '\2, \1' dans le champs remplacer
+
+
+Question 14
+===========
+
+11. Avec la commande $ sed -E 's/^( )+(.*)$/\2/g' MobyDick.txt > MobyDick-bis.txt on supprime tout les espaces en début de ligne, et on stocke le résultat dans MobyDick-bis.txt. La commande sed cherche toutes les lignes qui correspondent au regex '^( )+(.*)$' et les remplacent par '\2', le \2 représente le deuxième groupe du regex de recherche
+
+12. Avec la commande $ sed -E 's/(\([^()]*\))//g' 12.txt > 12-bis.txt on supprime toutes les parenthèses du ficher avec leurs contenus, le résultat est stocké dans 12-bis.txt. En ne mettant rien en les 2 slashs avant le g de la fin, on dit qu'on veut remplacer ce qu'on a trouvé par une chaine vide.
+
+13. Avec la commande $ sed -E 's/^(.*), (.*)$/\2, \1/g' 13.csv  > 13-bis.csv on échange les 2 colonnes du fichier, et on stocke le résultat dans le fichier 13-bis.csv. '\1' et '\2' représentent respectivement les groupes 1 et 2 du regex de recherche, donc sed les échange comme demandé.
