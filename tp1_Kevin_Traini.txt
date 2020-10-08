@@ -72,3 +72,9 @@ Question 10
 1. La regex pour les lignes qui finissent par des espaces ou des tabulation est '^.*[ \t]+$'
 
 2. La regex pour les lignes qui commencent par une tabulation est '^\t.*$'
+
+
+Question 11
+===========
+
+1. La regex pour chercher toutes les lignes qui commencent par des espaces est '^( )+(.*)$', on remplace ensuite ces lignes par le deuxième groupe '\2'
