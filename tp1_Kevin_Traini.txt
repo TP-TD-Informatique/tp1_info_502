@@ -124,3 +124,13 @@ Ce script se déroule en 3 étapes :
 - BEGIN -> initialise les 2 variables cpu à 0 et user à kevin
 - /^kevin.*$/ -> cherche toutes les lignes commençant par kevin et ajoute à la variable cpu le contenu de la 3ème colonne (le pourcentage de cpu utilisé)
 - END -> affiche le résultat
+La commande à utiliser après est $ ps aux | awk 'BEGIN {
+  cpu = 0
+  user = kevin
+}
+/^kevin.*$/ {
+  cpu += $3
+}
+END {
+  print "kevin\t", cpu"%"
+}'
