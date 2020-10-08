@@ -25,3 +25,9 @@ Question 3
 2. Avec la comande $ grep --color -E '(aa)*' test.txt toutes les lignes du fichier sont affichés, et les motifs reconnu sont mis en valeur avec une coloration. La ligne 'aaa' est reconnu car elle contient 'aa'.
 
 3. Pour reconnaitre seulement les lignes qui contiennent exactement un nombre pair de 'a', la commande est $ grep -E '^(aa)*$' test.txt
+
+
+Question 4
+==========
+
+1. L'expression régulière pour les mots qui contiennent les lettres a, b, c, d et e dans l'ordre est '^(.*a.*b.*c.*d.*e.*)$'. Le mot renvoyé est 'absconded'.
